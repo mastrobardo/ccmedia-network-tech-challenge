@@ -1,0 +1,157 @@
+@import "../../styles/variables.less";
+@import "../../styles/mixins.less";
+
+.bg1 {
+  background-color: @bg1;
+}
+.bg2 {
+  background-color: @bg2;
+}
+.bg3 {
+  background-color: @bg3;
+}
+.bg4 {
+  background-color: @bg4;
+}
+.bg5 {
+  background-color: @bg5;
+}
+.bg6 {
+  background-color: @bg6;
+}
+.bg7 {
+  background-color: @bg7;
+}
+.bg8 {
+  background-color: @bg8;
+}
+.bg9 {
+  background-color: @bg9;
+}
+
+#app {
+  display: grid;
+  gap: @grid-gap;
+  padding: @padding-medium;
+  .portrait-grid();
+  .landscape-grid();
+}
+
+.card {
+  .rounded-corners(@border-radius-large);
+  .box-shadow(@box-shadow-default);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s;
+  padding: @padding-medium;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: @image-max-height;
+  object-fit: contain;
+}
+
+.card-description-container {
+  padding: @padding-small;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-description {
+  margin: 0;
+  font-size: @font-size-default;
+}
+
+.name,
+.abv,
+.ibu {
+  font-weight: bold;
+  padding: @padding-small 0;
+}
+
+button.order {
+  margin: @margin-small 0;
+  padding: @padding-small @padding-medium;
+  border: none;
+  background-color: @primary-color;
+  color: white;
+  border-radius: @border-radius-small;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.order:hover {
+  background-color: @primary-color-hover;
+}
+
+.ribbon {
+  width: @ribbon-width;
+  height: @ribbon-height;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid @ribbon-border;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: @ribbon-span-width;
+  padding: @padding-medium 0;
+  background-color: @ribbon-bg;
+  box-shadow: @box-shadow-hover;
+  color: #fff;
+  font:
+    700 @font-size-large / 1 "Lato",
+    sans-serif;
+  text-shadow: 0 1px 1px @ribbon-text-shadow;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: -50px;
+  right: -50px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 45px;
+  transform: rotate(45deg);
+  padding-bottom: 3px;
+}
+
+.ibu-rectangle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}

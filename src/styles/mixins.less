@@ -1,0 +1,19 @@
+.rounded-corners(@radius) {
+  border-radius: @radius;
+}
+
+.box-shadow(@box-shadow) {
+  box-shadow: @box-shadow;
+}
+
+.portrait-grid() {
+  @media (orientation: portrait) {
+    grid-template-columns: repeat(@grid-columns-portrait, 1fr);
+  }
+}
+
+.landscape-grid() {
+  @media (orientation: landscape) {
+    grid-template-columns: repeat(@grid-columns-landscape, 1fr);
+  }
+}

@@ -1,0 +1,36 @@
+<!-- index.html or your main HTML file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <link rel="stylesheet" href="style.css"> <!-- Adjust as needed -->
+</head>
+<body>
+    <div id="app" class="container">
+        <!-- Cards will be appended here -->
+    </div>
+
+    <!-- Modal structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="circle">
+                <img id="modal-image" src="" alt="">
+                <div class="info">
+                    <span id="modal-ibu">IBU</span>
+                    <span id="modal-abv">ABV%</span>
+                </div>
+            </div>
+            <div class="modal-description">
+                <h2 id="modal-name">Item Name</h2>
+                <p id="modal-description">Item Description</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+
+</body>
+</html>

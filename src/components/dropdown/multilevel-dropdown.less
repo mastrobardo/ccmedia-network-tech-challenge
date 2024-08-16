@@ -1,0 +1,64 @@
+@import "@styles/variables.less";
+@import "@styles/mixins.less";
+
+.parent {
+  display: block;
+  position: relative;
+  float: left;
+  line-height: @dropdown-line-height;
+  background-color: @dropdown-bg;
+  border-right: 1px solid #ccc;
+}
+
+.parent a {
+  margin: @margin-medium @margin-large;
+  color: @dropdown-text-color;
+  text-decoration: none;
+}
+
+.parent:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+.child {
+  display: none;
+}
+
+.child li {
+  background-color: @dropdown-item-bg;
+  line-height: @dropdown-line-height;
+  border-bottom: 1px solid @dropdown-item-border;
+  border-right: 1px solid @dropdown-item-border;
+  width: 100%;
+}
+
+.child li a {
+  color: @dropdown-text-color-hover;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+  margin-left: 1px;
+}
+
+li:hover {
+  background-color: @dropdown-item-bg-hover;
+}
+
+.parent li:hover {
+  background-color: @dropdown-bg-hover;
+}
+
+.expand {
+  font-size: @font-size-small;
+  float: right;
+  margin-right: 5px;
+}

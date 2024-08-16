@@ -1,0 +1,11 @@
+@import "variables.less";
+@import "mixins.less";
+@import "fonts.less";
+
+#app {
+  display: grid;
+  gap: @grid-gap;
+  padding: @padding-medium;
+  .portrait-grid();
+  .landscape-grid();
+}
